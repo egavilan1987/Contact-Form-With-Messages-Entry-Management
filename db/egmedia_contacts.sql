@@ -1,5 +1,3 @@
-egmedia_contacts.sql
-
 CREATE DATABASE egmedia_contacts;
 
 USE egmedia_contacts;
