@@ -10,6 +10,6 @@ CREATE TABLE tbl_contacts(
      phone VARCHAR (20) NOT NULL,
      subject VARCHAR (20) NOT NULL,
      message VARCHAR (200) NOT NULL,
-     sentDate DATETIME NOT NOT NULL
+     sentDate DATETIME NOT NOT NULL,
      PRIMARY KEY(contact_id)
 );
