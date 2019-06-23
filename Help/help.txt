@@ -5,40 +5,166 @@ https://codecanyon.net/item/ultimate-php-html5-ajax-contact-form/10017468
  1 - https://codecanyon.net/item/php-contact-and-newsletter-form/9723083
  
  
-Be sure to check out the AJAX version of this contact form – embed the form in any page (including .html) and send messages without reloading the page!
+-- phpMyAdmin SQL Dump
+-- version 4.8.5
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jun 23, 2019 at 07:23 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.2
 
-Simple PHP Contact Form allows you to easily place a self-contained Contact Page on any PHP page of your website.
-------------
-WannaTalk is a Full Responsive PHP Working Ajax Contact Form with Required field jQuery validation built on Bootstrap Framework, HTML5/CSS3 and JQuery. Code written in a simple way by which you can easily integrated at your site.
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
 
-WannaTalk Responsive PHP Working Ajax Contact Form can be used for your organization, company, business. So that your visitors, customers, clients, agents, members can contact you and/or let you know their concern through the form.
 
-WannaTalk is a responsive, clean, well documented Ajax Contact Form. It can be simply integrated at your site with the documentation help. All the codes are clean, well commented and well organized with proper help documentation. It looks great with all types of devices. Try out the demo.
-------------
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
-The best contact form for any website! Perfectly built using PHP and Ajax. Simple and easy to use https://mhweb/. Can’t set it up sure make sure you pay for support. Most questions are already answered.
-------------------
-Note:
-You won’t receive an email (emails go to site admin, not users).
-As this is a demo, the email doesn’t go anywhere, but you’ll see what feedback the user will get.
+--
+-- Database: `egmedia_contacts`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_contacts`
+--
+
+CREATE TABLE `tbl_contacts` (
+  `contact_id` int(11) NOT NULL,
+  `firstname` varchar(20) NOT NULL,
+  `lastname` varchar(20) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `subject` varchar(70) NOT NULL,
+  `message` varchar(500) NOT NULL,
+  `sentDate` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_contacts`
+--
+
+INSERT INTO `tbl_contacts` (`contact_id`, `firstname`, `lastname`, `email`, `phone`, `subject`, `message`, `sentDate`) VALUES
+(1, 'Mia', 'Yang', 'miay@hotmail.com', '(650) 798-9814', 'The Tyranny of E-mail', 'The first e-mail was sent less than 40 years ago. In 2007 the worlds billion PCs exchanged 35 trillion e-mails.', '2019-06-22 23:50:46'),
+(2, 'Peter', 'White', 'whit@gmail.com', '(202) 539-1401', 'Focusing Email Messages', 'An email message is generally limited to one idea rather than addressing several issues. If you address more than one topic in a single email message, chances are the recipient will forget to respond to all points discussed. Discussing one topic allows you to write a descriptive subject line, and the receiver can file the single subject message in a separate mailbox if desired. If you must send a lengthy message, divide it into logical sections for easy comprehension.\r\n', '2019-06-22 23:57:54'),
+(3, 'Irina', 'Taylor', 'taylor@hotmail.com', '(250) 543-4587', 'Editing Email Messages', 'Edit all your emails for proper grammar, punctuation and spelling.\r\n\r\nNothing discredits you faster than sloppy email. Yes, you have spellcheck, I know, but not everyone hooks it up. Proofread. Nothing says I am not a business professional, faster or more loudly than poor composition or writing skills.\r\n', '2019-06-22 23:59:49'),
+(4, 'Bob', 'Lee', 'lee@gmail.com', '(480) 455-7895', 'Distributing Email Messages', 'In the workplace, email is a critical communication tool, so it is common for an email message . . . to be distributed far beyond its intended range, sometimes causing embarrassment (or worse) for the sender.', '2019-06-23 00:01:05');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tbl_contacts`
+--
+ALTER TABLE `tbl_contacts`
+  ADD PRIMARY KEY (`contact_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tbl_contacts`
+--
+ALTER TABLE `tbl_contacts`
+  MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
+-----------------------------------------------------------------------
+
+Contact Form with Messages Entry Management [CFMEM]
+(PHP, JavaScript, MySQL, AJAX, JSON, jQuery and BOOTSTRAP)
+
+-Plan [done]
+- Research and planning [done]
+- Sketching [done]
+- Database [done]
+  create egmedia_contacts.sql [done]
+- Coding [done]
+	View and structuring coding
+•	index.html
+•	contact.php
+•	messagesManagement.php
+•	View message details
+•	Delete message
+•	printMessage.php
+
+	Coding [done]
+•	index.html
+•	contact.php
+•	messagesManagement.php
+•	View message details
+•	Delete message
+•	printMessage.php
+Code Review [done]
+- Upload [next]
+- Blog [Working on this]
+- Video
+
+
+
+
+BLOG
+Contact Form with Messages Entry Management
+This simple contact form allows you to integrate the form in any website or you can customize this one and send messages without reloading the page.
+You can easily manage all the messages entry through the Messages Entry Management where you can view the contact details as first name, last name, e-mail, phone, subject, message and sent date.
+The website, the contact form and the Messages Entry Management are fully responsive and all the fields are validated before sending messages. 
+It is very important to keep in mind that you will not be able to receive any email on any email account as Gmail. The messages are stored on the database (egmedia_contacts) where you can access using the Messages Entry management. 
+On the contact form you have six fields, first name, last name, email, phone, subject and message which are all required before sending any message. When the message has been sent the users will see a message let them know that the message has been sent successfully otherwise a warning message will be displayed.
 
 Features include:
+•	No page reloads
+•	Fully responsive
+•	Required field validation
+•	Successful message
+•	Error messages
+•	Messages Management
+•	Translations via JSON file
+•	Very easy to integrate on nay website.
+•	Main webpage
+•	and Much More!
+Technologies
+To be able to fully develop this application we use PHP, JavaScript, Ajax, Json, jQuery, MySQL and Bootstrap.
 
-All fields have a validation script so you get the *required info you need.
-Integrated thank you / success page.
-Integrated error messages, if fields aren’t correct or incomplete.
-Easy integration/instructions into your current PHP site
-Required field validation
-Translations via simple JSON file
-AJAX enabled (no page reloads)
-Mobile friendly
-Easy integration to your website
-No page reloads
-Fully Responsive
-PHP, jQuery, Ajax Form
-AJAX enabled (no page reloads)
-Bootstrap Framework
-Fully responsive, mobile friendly
-Manage contact forms
-and Much More!
-Add form content to MySQL database table
+
+
+-------------------------------------------------------------------------------------
+
+CREATE DATABASE egmedia_contacts;
+
+USE egmedia_contacts;
+
+DROP TABLE IF EXISTS `tbl_contacts`;
+
+CREATE TABLE `tbl_contacts` (
+  `contact_id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(20) NOT NULL,
+  `lastname` varchar(20) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `subject` varchar(70) NOT NULL,
+  `message` varchar(500) NOT NULL,
+  `sentDate` datetime NOT NULL,
+  PRIMARY KEY (`contact_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+INSERT INTO `tbl_contacts` (`contact_id`, `firstname`, `lastname`, `email`, `phone`, `subject`, `message`, `sentDate`) VALUES
+(1, 'Mia', 'Yang', 'miay@hotmail.com', '(650) 798-9814', 'The Tyranny of E-mail', 'The first e-mail was sent less than 40 years ago. In 2007 the worlds billion PCs exchanged 35 trillion e-mails.', '2019-06-22 23:50:46'),
+(2, 'Peter', 'White', 'whit@gmail.com', '(202) 539-1401', 'Focusing Email Messages', 'An email message is generally limited to one idea rather than addressing several issues. If you address more than one topic in a single email message, chances are the recipient will forget to respond to all points discussed. Discussing one topic allows you to write a descriptive subject line, and the receiver can file the single subject message in a separate mailbox if desired. If you must send a lengthy message, divide it into logical sections for easy comprehension.\r\n', '2019-06-22 23:57:54'),
+(3, 'Irina', 'Taylor', 'taylor@hotmail.com', '(250) 543-4587', 'Editing Email Messages', 'Edit all your emails for proper grammar, punctuation and spelling.\r\n\r\nNothing discredits you faster than sloppy email. Yes, you have spellcheck, I know, but not everyone hooks it up. Proofread. Nothing says I am not a business professional, faster or more loudly than poor composition or writing skills.\r\n', '2019-06-22 23:59:49'),
+(4, 'Bob', 'Lee', 'lee@gmail.com', '(480) 455-7895', 'Distributing Email Messages', 'In the workplace, email is a critical communication tool, so it is common for an email message . . . to be distributed far beyond its intended range, sometimes causing embarrassment (or worse) for the sender.', '2019-06-23 00:01:05');
+

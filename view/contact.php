@@ -79,11 +79,11 @@
                 <h3 class="text-center">Please fill out this form to contact us</h3>
                 <hr>
                 <div id="alert_error_message" class="alert alert-danger collapse" role="alert">
-                    <i class="fa fa-exclamation-triangle"></i>
+                  <i class="fa fa-exclamation-triangle"></i>
                     Please check in on some of the fields below.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                     </button>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
                 </div>
                 <div id="alert_sucess_message" class="alert alert-success collapse" role="alert">                  
                    Your message was sent successfully. We will get to you soon.
@@ -145,19 +145,8 @@
       </div>
     </div>
   </section>
-
-  <!-- STAFF -->
-  <section id="staff" class="py-5 text-center bg-dark text-white">
-    <div class="container">
-      
-      <hr>
-      <div class="row">
-
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
+  <br><br>
+  <!-- footer -->
   <footer id="main-footer" class="text-center p-4">
     <div class="container">
       <div class="row">
@@ -167,7 +156,6 @@
       </div>
     </div>
   </footer>
-
 
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>

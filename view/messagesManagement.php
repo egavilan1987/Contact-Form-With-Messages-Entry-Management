@@ -17,168 +17,101 @@
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container">
       <a href="messagesManagement.php" class="navbar-brand">Messages Entry Management</a>
-      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
     </div>
   </nav>
 
   <section id="contact" class="py-3">
     <div class="container">
-        <div id="loadUsersTable"></div>
+        <div id="alert_sucess_message" class="alert alert-success collapse" role="alert">                  
+            Message has been deleted successfully!
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div id="loadMessagesTable"></div>
     </div>
   </section>
 
-
-
-
-<!-- Modal -->
-<div class="modal fade" id="modalView" tabindex="-1" role="dialog" aria-labelledby="usersModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Message Details</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-                <div class="row">
-                  <div class="col-md-4" >
-                    <strong>First Name:</strong>
-                  </div>
-                  <div class="col-md-8">
-                    <div id="viewFirstname">Enmanuel</div>                    
-                  </div>
-                  <div class="col-md-4" >
-                    <strong>Last Name:</strong>
-                  </div>
-                  <div class="col-md-8">
-                    <div id="viewLastname">Gavilan</div>                    
-                  </div>
-                  <div class="col-md-4" >
-                    <strong>E-mail:</strong>
-                  </div>
-                  <div class="col-md-8">
-                    <div id="viewEmail">enmanuelga@gmail.com</div>                    
-                  </div>
-                  <div class="col-md-4" >
-                    <strong>Subject:</strong>
-                  </div>
-                  <div class="col-md-8">
-                    <div id="viewSubject">Testing this thing</div>                    
-                  </div>
-                  <div class="col-md-4" >
-                    <strong>Message: </strong>
-                  </div>
-                  <div class="col-md-8">
-                    <div id="viewMessage">That is, you'd like to know the word count for a website without having to actually count all the words on the page by hand. Website Word Count is a tool which will do exactly that for you. It's a website word counter created specifically so you can find out the number of words on any page on the Internet.</div>                    
-                  </div>
-                  <div class="col-md-4" >
-                    <strong>Sent Date</strong>
-                  </div>
-                  <div class="col-md-8">
-                    <div id="viewSubject">2019-06-20 10:21:21</div>                    
-                  </div>
-                </div> 
-
-
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-        <!-- User Detail Modal -->
-        <div class="modal fade" id="modalView2" tabindex="-1" role="dialog" aria-labelledby="usersModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="messageModalLabel">Message Details</h5>          
+  <!-- Modal -->
+  <div class="modal fade" id="modalView" tabindex="-1" role="dialog" aria-labelledby="usersModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Message Details
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-4">
+              <strong>First Name:
+              </strong>
+            </div>
+            <div class="col-md-8">
+              <div id="firstname">
               </div>
-              <div class="modal-body">
-                <div class="modal-body">
-
-
-
-                <div class="row">
-                  <div class="col-md-4" >
-                    <strong>First Name:</strong>
-                  </div>
-                  <div class="col-md-8">
-                    <div id="viewFirstname">Enmanuel</div>                    
-                  </div>
-                  <div class="col-md-4" >
-                    <strong>Last Name:</strong>
-                  </div>
-                  <div class="col-md-8">
-                    <div id="viewLastname">Gavilan</div>                    
-                  </div>
-                  <div class="col-md-4" >
-                    <strong>E-mail:</strong>
-                  </div>
-                  <div class="col-md-8">
-                    <div id="viewEmail">enmanuelga@gmail.com</div>                    
-                  </div>
-                  <div class="col-md-4" >
-                    <strong>Subject:</strong>
-                  </div>
-                  <div class="col-md-8">
-                    <div id="viewSubject">Testing this thing</div>                    
-                  </div>
-                  <div class="col-md-4" >
-                    <strong>Message: </strong>
-                  </div>
-                  <div class="col-md-8">
-                    <div id="viewMessage">That is, you'd like to know the word count for a website without having to actually count all the words on the page by hand. Website Word Count is a tool which will do exactly that for you. It's a website word counter created specifically so you can find out the number of words on any page on the Internet.</div>                    
-                  </div>
-                  <div class="col-md-4" >
-                    <strong>Sent Date</strong>
-                  </div>
-                  <div class="col-md-8">
-                    <div id="viewSubject">2019-06-20 10:21:21</div>                    
-                  </div>
-                </div> 
-
-
-
-
-
-
-
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
+            </div>
+            <div class="col-md-4">
+              <strong>Last Name:
+              </strong>
+            </div>
+            <div class="col-md-8">
+              <div id="lastname">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <strong>E-mail:
+              </strong>
+            </div>
+            <div class="col-md-8">
+              <div id="email">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <strong>Phone:
+              </strong>
+            </div>
+            <div class="col-md-8">
+              <div id="phone">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <strong>Subject:
+              </strong>
+            </div>
+            <div class="col-md-8">
+              <div id="subject">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <strong>Message: 
+              </strong>
+            </div>
+            <div class="col-md-8">
+              <div id="message">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <strong>Sent Date
+              </strong>
+            </div>
+            <div class="col-md-8">
+              <div id="sentDate">
               </div>
             </div>
           </div>
         </div>
-        <!--End User Detail Modal -->
-         
-
-  <!-- FOOTER -->
-  <footer id="main-footer" class="text-center p-4">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-            <p>Developed by <a class="grey-text text-lighten-4" href="https://egvlnmedia.blogspot.com/" target="_blank"> EGMedia.com</a> | All Rights Reserved. &copy; 2019 </p>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+          </button>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
+  <!--End User Detail Modal -->
 
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
@@ -186,38 +119,64 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
-<?php
 
-  // include footer file
-  include '../include/footer.php';
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">  
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script> 
 
-?>
-  <script>
-  $(function() {
-      // Get the current year for the copyright
-      $('#year').text(new Date().getFullYear());
-
-      $('#loadUsersTable').load('contacts/contactsTable.php');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  });
-  </script>
 </body>
 
 </html>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+
+  // Get the current year for the copyright
+  $('#year').text(new Date().getFullYear());
+
+  $('#loadMessagesTable').load('contacts/contactsTable.php');
+
+  });
+
+  function addMessage(contact_id) {
+      $.ajax({
+          type: "POST",
+          data: "contact_id=" + contact_id,
+          url: "../process/contacts/getMessageData.php",
+          success: function(r) {
+              data = jQuery.parseJSON(r);              
+              $('#contact_id').text(data['contact_id']);
+              $('#firstname').text(data['firstname']);
+              $('#lastname').text(data['lastname']);
+              $('#email').text(data['email']);
+              $('#phone').text(data['phone']);
+              $('#subject').text(data['subject']);
+              $('#message').text(data['message']);
+              $('#sentDate').text(data['sentDate']);
+          }
+      });
+  }
+
+  function deleteMessage(contact_id) {
+
+      var answer = confirm("Are you sure want to delete this message?");
+
+      if (answer == true) {
+          $.ajax({
+              type: "POST",
+              data: "contact_id=" + contact_id,
+              url: "../process/contacts/deleteMessage.php",
+              success: function(r) {
+                  if (r == 1) {
+                      $('#loadMessagesTable').load('contacts/contactsTable.php');
+                      $("#alert_sucess_message").show();
+                  } else {
+                      alert("Message could not be deleled.");
+                  }
+              }
+          });
+      } else {
+          $("#alert_sucess_message").hide();
+      }
+  }
+
+  </script>
